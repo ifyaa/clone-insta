@@ -1,17 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import Header from './components/Header';
+import Home from './navigation/Home';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>지랄뻑이다! 진짜 미친 지랄뻑이면...</Text>
+    <View style={styles.outer}>
+      <Header />
+      <Home/>
+      <Text> 지랄같은 일들</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+
+  outer: {
     flex: 1,
+
+  },
+  container: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
